@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CV</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+<div class="progress-bar"></div>
+
+<header>
+  <div class="menu">
+    <div class="menu-button" onclick="showMenu()">
+      <div class="first-line"></div>
+      <div class="second-line"></div>
+      <div class="third-line"></div>
+    </div>
+
+    <div class="menu-items">
+      <a href="#introduction">
+        <span></span>
+        Introduction
+      </a>
+      <a href="#skills">
+        <span></span>
+        Skills
+      </a>
+      <a href="#experience">
+        <span></span>
+        Experience
+      </a>
+      <a href="#education">
+        <span></span>
+        Education
+      </a>
+      <a href="#contact">
+        <span></span>
+        Contact me
+      </a>
+    </div>
+  </div>
+
+  <section id="introduction">
+    <div class="introduction-background">
+      <div class="introduction">
+        <span>Kateryna Kisiv</span>
+        <span>Trainee FrontEnd Developer</span>
+      </div>
+    </div>
+
+    <div class="avatar" onclick="openModal()">
+      <img src="images/avatar.jpg" alt="avatar">
+    </div>
+
+    <div class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img src="images/avatar.jpg" alt="modal" id="modal">
+    </div>
+
+    <div class ="info">
+      <div class="info-contacts">
+        <div class="left-items">
+          <p><i class='far fa-envelope'></i> <span>katerinakisiv@gmail.com</span></p>
+          <p><i class="fab fa-linkedin-in"></i> <span>www.linkedin.com/in/katekisiv</span></p>
+          <p><i class="fas fa-map-marker"></i> <span>Kyiv, Ukraine</span></p>
+        </div>
+        <div class="right-items">
+          <p><i class='fas fa-paper-plane'></i> <span>katekisiv</span></p>
+          <p><i class='fas fa-phone'></i> <span>+380 95 584 25 33</span></p>
+        </div>
+      </div>
+
+      <div class="info-content">
+        <i>Click on the photo</i>
+        <p>Hello! My name is Kate. I am a 3rd year student of the Kyiv Polytechnic Institute,
+          Faculty of Applied Mathematics. <br/>
+          I started studying frontend at the end of this summer on my own.
+          Now I am also studying in paid courses. <br/>
+          One of the feature why I like front-end is that I can see the result immediately on my screen
+          and control process of creating. The process is exciting and captivating.<br/>
+          I will be glad to get to your courses and improve my skills to the level of a junior developer!</p>
+      </div>
+    </div>
+  </section>
+</header>
+
+<main>
+  <section id="skills">
+    <h1>SKILLS</h1>
+    <div class="skills">
+      <div class="skills-professional">
+        <h2>Professional:</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Basic of JavaScript</li>
+          <li>Basic of OOP</li>
+          <li>English - Intermediate +</li>
+        </ul>
+      </div>
+      <div class="skills-personal">
+        <h2>Personal:</h2>
+        <ul>
+          <li>Communicative</li>
+          <li>Responsible</li>
+          <li>Teamwork</li>
+          <li>Friendly</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="experience-description">
+      <i class="fas fa-briefcase"></i> <span>Experience</span>
+    </div>
+    <div class="experience-content">
+      <p>Application Support Engineer at ThingsBoard inc.</p>
+      <p>&nbsp &nbsp Consultation of clients on the company's product.
+        Faced with rest api queries, building the logic of custom solutions, linux environment</p>
+      <p>&nbsp &nbsp August 2021 - November 2021</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="education-description">
+      <i class="fas fa-user-graduate"></i> <span>Education</span>
+    </div>
+    <div class="education-content">
+      <p>National Technical University of Ukraine "Igor Sikorsky Kyiv Polytechnic Institute".
+        Faculty of Applied Mathematics</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>Contact me:</h1>
+    <form id="form">
+      <div class="form-item">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div class="form-item">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="form-item">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="3" cols="30"></textarea>
+      </div>
+
+      <input type="submit" value="Send">
+    </form>
+  </section>
+</main>
+
+<script async type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

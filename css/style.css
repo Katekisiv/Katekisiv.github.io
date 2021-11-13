@@ -1,0 +1,382 @@
+:root {
+    --wheat: #f8e5c9;
+}
+
+* {
+    font-family: Raleway, fantasy;
+}
+
+body {
+    background-color: var(--wheat);;
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 6px;
+    background-color: darkred;
+    z-index: 1;
+}
+
+.menu {
+    position: relative;
+    z-index: 1;
+}
+
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.first-line, .second-line, .third-line {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+}
+
+.menu-close-button {
+    left: 180px;
+}
+
+.menu-close-button .first-line {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.menu-close-button .second-line {
+    opacity: 0;
+}
+
+.menu-close-button .third-line {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menu-items {
+    left: -200px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.62);
+    transition: 0.5s;
+}
+
+.menu-items-show {
+    left: 0;
+}
+
+.menu-items a {
+    display: block;
+    margin: 20px 0;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: var(--wheat);
+    font-size: 20px;
+}
+
+#introduction {
+    position: relative;
+}
+
+.introduction-background {
+    overflow: auto;
+    height: 350px;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url("../images/background.jpg");
+    background-attachment: fixed;
+}
+
+.introduction {
+    margin: 100px auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.introduction span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 6px solid white;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2;
+}
+
+.modal img {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: top left;
+    object-fit: cover;
+    animation-name: zoom;
+    animation-duration: 0.3s;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.close:hover {
+    color: #a6a6a6;
+}
+
+.info {
+    position: relative;
+    max-width: 900px;
+    min-height: 350px;
+    margin: 10px auto 50px;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 17px;
+}
+
+.info-contacts {
+    display: flex;
+    margin: 30px;
+}
+
+.left-items {
+    flex: 0 1 620px;
+}
+
+.right-items {
+    flex: 0 1 280px;
+}
+
+.info-contacts p {
+    display: block;
+}
+
+.info-content {
+    padding: 0 10px;
+    text-align: center;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+#skills {
+    margin-bottom: 50px;
+}
+
+.skills {
+    display: flex;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 18px;
+}
+
+#skills h1{
+    text-align: center;
+}
+
+.skills div {
+    flex: 0 1 50%;
+    text-align: center;
+}
+
+#skills ul{
+    display: inline-block;
+    text-align: start;
+}
+
+#skills li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
+#experience, #education {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.experience-description, .education-description {
+    position: absolute;
+    top: 50%;
+    padding: 20px;
+    width: 125px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.experience-description {
+    left: 25%;
+    transform: translate(-50%, -25%);
+}
+
+.education-description {
+    left: 75%;
+    transform: translate(-50%, -75%);
+}
+
+.experience-content, .education-content{
+    width: 45%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 16px;
+}
+
+.experience-content {
+    margin-left: auto;
+}
+
+.experience-description::before, .education-description::before {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 10px;
+    top: 28px;
+    background: white;
+    opacity: 0.6;
+}
+
+.experience-description::before {
+    left: 100%;
+}
+
+.education-description::before {
+    right: 100%;
+}
+
+
+#contact {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form-item {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-item span {
+    position: absolute;
+    top: 12px;
+    right: 120px;
+    color: red;
+}
+
+label {
+    flex: 0 1 100px;
+    align-self: center;
+    margin-right: 20px;
+}
+
+input, textarea {
+    flex: 0 1 300px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid var(--wheat);
+    border-radius: 15px;
+    text-align: center;
+    outline: transparent;
+}
+
+input[type="submit"] {
+    width: 150px;
+    background-color: #9c75b0;
+    cursor: pointer;
+}
+
+.error {
+    border-bottom: 1px solid red;
+}
+
+@keyframes zoom {
+    from {
+        transform:scale(0) translate(-50%, -50%);
+    }
+    to {
+        transform:scale(1) translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    main, .info {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .info {
+        margin-top: -90px;
+    }
+
+    .avatar {
+        position: relative;
+    }
+
+    .experience-description::before, .education-description::before {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .info-contacts {
+        flex-wrap: wrap;
+    }
+    .left-items, .right-items {
+        flex: 0 1 100%;
+    }
+
+    #experience {
+
+    }
+
+    .experience-description, .education-description {
+        position: relative;
+    }
+
+    .experience-description {
+        left: 75%;
+    }
+
+    .education-description {
+        top: 25px;
+        left: 25%;
+    }
+}
